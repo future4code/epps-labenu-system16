@@ -1,13 +1,12 @@
 import connection from "../connection";
 
 export async function insertClass(
+    id: number,
     nome: string,
     dataInicio: string,
     dataFinal: string,
     modulo: number
-): Promise<void> {
-
-    const id = Math.floor(Math.random() * 10)
+): Promise<void> {    
 
     await connection("turma")
         .insert({

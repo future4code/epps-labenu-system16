@@ -2,8 +2,8 @@ POST http://localhost:3003/criarturma
 Content-Type: application/json
 
 {
-    "nome": "Teste",
+    "nome": "Teste1",
     "inicio": "30/04/2021",
     "final": "30/10/2021",
-    "modulo": 8
+    "modulo": 2
 }
