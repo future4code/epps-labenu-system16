@@ -2,8 +2,8 @@ POST http://localhost:3003/criarturma
 Content-Type: application/json
 
 {
-    "nome": "Turma 2",
-    "dataInicio": "2021-03-30",
-    "dataFinal": "2021-06-30",
-    "modulo": 6
+    "nome": "Teste",
+    "inicio": "30/04/2021",
+    "final": "30/10/2021",
+    "modulo": 8
 }
