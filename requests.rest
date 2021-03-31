@@ -2,8 +2,31 @@ POST http://localhost:3003/criarturma
 Content-Type: application/json
 
 {
-    "nome": "Teste1",
+    "nome": "Teste2",
     "inicio": "30/04/2021",
-    "final": "30/10/2021",
-    "modulo": 2
+    "final": "30/10/2022",
+    "modulo": 1
+}
+
+###
+POST http://localhost:3003/cadastroaluno
+Content-Type: application/json
+
+{
+    "nome": "Teste 5",
+    "email": "teste5@teste5.com",
+    "dataNasc": "03/02/1990",
+    "turmaId": 1617216361
+}
+
+###
+
+POST http://localhost:3003/cadastrodocente
+Content-Type: application/json
+
+{
+    "nome": "Professor 1",
+    "email": "professor1@professor1.com",
+    "dataNasc": "03/02/1990",
+    "turmaId": 1617216361
 }
