@@ -1,5 +1,6 @@
+import moment from "moment"
 import { Request, Response } from "express"
-import connection from "../connection"
+import { insertClass } from "../data/insertClass"
 
 export const createClass = async (req: Request, res: Response): Promise<any> => {
     let errorCode = 400
@@ -7,25 +8,36 @@ export const createClass = async (req: Request, res: Response): Promise<any> => 
 
         type Class = {
             nome: string,
-            dataInicio: Date,
-            dataFinal: Date,
+            inicio: string,
+            final: string,
             modulo: number
         }
 
-        const { nome, dataInicio, dataFinal, modulo } = req.body as Class
+        let { nome, inicio, final, modulo } = req.body as Class
 
-        const result = await connection("turma")
-            .insert(
-                {
-                    id: Math.floor(Math.random() * 10),
-                    nome,
-                    data_inicio: dataInicio,
-                    data_final: dataFinal,
-                    modulo
-                }
-            )
+        if (!nome || !inicio || !final) {
+            throw new Error("Todos os campos obrigatorios!");
+        }
 
-        res.status(201).send(result)
+        // if (isNaN(modulo) || modulo === undefined) {
+        //     throw new Error(`Modulo inválido.`);
+        // }
+
+        if (modulo > 7 || modulo < 0) {
+            throw new Error(`Modulo ${modulo} inexistente!`);
+        }
+
+        const id = Math.floor(Date.now() / 1000)
+
+        await insertClass(
+            id,
+            nome,
+            moment(inicio, 'DD/MM/YYYY').format('YYYY-MM-DD'),
+            moment(final, 'DD/MM/YYYY').format('YYYY-MM-DD'),
+            modulo
+        )
+
+        res.status(201).send({ message: "Turma criada com sucesso!", id: id })
 
 
     } catch (error) {
