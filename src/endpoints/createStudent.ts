@@ -13,8 +13,8 @@ export async function createStudent(
     try {
         const { nome, email, dataNasc, turmaId } = req.body as aluno
 
-        if (!nome || !email || !dataNasc || !turmaId) {
-            throw new Error("Todos os campos obrigatorios!");
+        if (!nome || !email || !dataNasc ) {
+            throw new Error("Os campos nome, email e data de nascimento obrigatorios!");
         }
 
         if (!email.includes("@")) {
