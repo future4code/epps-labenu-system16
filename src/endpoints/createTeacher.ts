@@ -8,7 +8,7 @@ export async function createTeacher(
     res: Response
 ): Promise<any> {
 
-    let errorCode = 400
+    let errorCode = 400;
 
     try {
         const { nome, email, dataNasc, turmaId } = req.body as professor
