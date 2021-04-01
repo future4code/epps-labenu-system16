@@ -13,3 +13,10 @@ export type professor = {
     dataNasc: Date,
     turmaId: number
 }
+
+export type Class = {
+    nome: string,
+    inicio: string,
+    final: string,
+    modulo: number
+}
