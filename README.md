@@ -20,14 +20,14 @@ Ele deve possuir, ao menos, as 3 entidades importantes:
 
 As funcionalidades básicas são:
 
-→ Criar estudante;
+→ Criar estudante;(ok)
 
-→ Criar docente;
+→ Criar docente;(ok)
 
-→ Criar turma;
+→ Criar turma;(ok)
 
-→ Adicionar estudante na turma;
+→ Adicionar estudante na turma;(ok)
 
-→ Adicionar docente na turma;
+→ Adicionar docente na turma;(ok)
 
 → Pegar a idade de algum estudante a partir do id
