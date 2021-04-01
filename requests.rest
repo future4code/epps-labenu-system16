@@ -13,10 +13,9 @@ POST http://localhost:3003/cadastroaluno
 Content-Type: application/json
 
 {
-    "nome": "Teste 5",
-    "email": "teste5@teste5.com",
-    "dataNasc": "03/02/1990",
-    "turmaId": 1617216361
+    "nome": "aluno6",
+    "email": "aluno6@aluno6.com",
+    "dataNasc": "03/12/1997"
 }
 
 ###
@@ -45,4 +44,14 @@ Content-Type: application/json
 
 {
     "nome": "Back-end"
+}
+
+###
+
+PUT http://localhost:3003/adicionaraluno
+Content-Type: application/json
+
+{
+    "estudanteId":,
+    "turmaId": 1617215410 
 }
