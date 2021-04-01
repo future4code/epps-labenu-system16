@@ -3,6 +3,16 @@ export enum MODALIDADE_CLASSE{
     "NOTURNO" = "noturno"
 }
 
+export enum ESPECIALIDADE_DOCENTE {
+    "REACT" = "react",
+    "REDUX" = "redux",
+    "CSS" = "css",
+    "TESTES" = "testes",
+    "TYPESCRIPT" = "typescript",
+    "PROGRAMAÇÃO ORIENTADA A OBJETOS" = "programação orientada a objetos",
+    "BACKEND" = "backend"
+}
+
 export type aluno = {
     // id: number,
     nome: string,
