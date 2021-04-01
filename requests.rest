@@ -30,3 +30,19 @@ Content-Type: application/json
     "dataNasc": "03/02/1990",
     "turmaId": 1617216361
 }
+
+###
+POST http://localhost:3003/cadastropassatempo
+Content-Type: application/json
+
+{
+    "nome": "Leitura."
+}
+
+###
+POST http://localhost:3003/cadastroespecialidade
+Content-Type: application/json
+
+{
+    "nome": "Back-end"
+}
