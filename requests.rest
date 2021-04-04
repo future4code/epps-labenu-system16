@@ -35,7 +35,7 @@ POST http://localhost:3003/cadastropassatempo
 Content-Type: application/json
 
 {
-    "nome": "Leitura."
+    "nome": "Assistir filmes"
 }
 
 ###
@@ -55,3 +55,6 @@ Content-Type: application/json
     "estudanteId":,
     "turmaId": 1617215410 
 }
+
+###
+GET http://localhost:3003/buscaridadealuno/1617220251
